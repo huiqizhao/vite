@@ -5,6 +5,7 @@ defineProps<{ msg: string }>()
 
 const count = ref(0)
 const number = ref(0)
+// console.log(import.meta.env.VITE_APP_WEB_URL)
 </script>
 
 <template>
