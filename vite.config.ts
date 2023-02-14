@@ -44,5 +44,17 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         },
       },
     },
+    server: {
+      // host: '127.0.0.1',
+      // port: 5173,
+      // open: true,
+      // https: false,
+      proxy: {
+        '/api': {
+          target: 'https://word-kf.thinktown.com:8443/index.php',
+          changeOrigin: true,
+        },
+      },
+    },
   }
 })

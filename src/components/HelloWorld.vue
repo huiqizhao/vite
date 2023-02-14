@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue'
 import { useCounterStore } from '@/store/counter'
 import { storeToRefs } from 'pinia'
+import loginApi from '@/service/api/login/login'
 
 defineProps<{ msg: string }>()
 
@@ -26,6 +27,14 @@ store.$patch({
 store.$reset()
 // 环境变量
 // console.log(import.meta.env.VITE_APP_WEB_URL)
+// loginApi.login({
+//   name: '1390',
+//   code: 'xkt123456',
+//   remember: 0,
+//   // eslint-disable-next-line camelcase
+//   user_type_id: 1,
+//   type: 2,
+// })
 </script>
 
 <template>
