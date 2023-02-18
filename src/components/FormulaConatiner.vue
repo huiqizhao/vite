@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <math-jax :latex="formula" />
   </div>
 </template>
@@ -10,4 +10,13 @@ import { ref, onMounted } from 'vue'
 const formula = ref('$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$')
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.container {
+  span {
+    visibility: collapse;
+  }
+  :deep(span > .MathJax) {
+    visibility: visible;
+  }
+}
+</style>
