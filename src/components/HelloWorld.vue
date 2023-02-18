@@ -72,13 +72,13 @@ const initOptions = ref({
 </script>
 
 <template>
-  <editor
+  <!-- <editor
     :id="tinymceId"
     v-model="contentValue"
     initial-value="<p>Initial editor content</p>"
     :init="initOptions"
     tinymce-script-src="/tinymce/tinymce.min.js"
-  />
+  /> -->
   <h1>{{ msg }}</h1>
 
   <div class="card">
@@ -89,7 +89,7 @@ const initOptions = ref({
     </p>
   </div>
 
-  <p>
+  <!-- <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the
     official Vue + Vite starter
@@ -98,7 +98,7 @@ const initOptions = ref({
     Install
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
     in your IDE for a better DX
-  </p>
+  </p> -->
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
