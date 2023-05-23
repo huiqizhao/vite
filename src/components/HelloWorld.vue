@@ -17,7 +17,7 @@ import 'tinymce/plugins/fullscreen' //全屏
 import 'tinymce/plugins/searchreplace'
 import 'tinymce/plugins/preview'
 
-// import MathMl2LaTeX from 'mathml2latex'
+import MathMl2LaTeX from 'mathml2latex'
 
 defineProps<{ msg: string }>()
 
@@ -61,24 +61,29 @@ const initOptions = ref({
 
   plugins:
     'link lists image code table wordcount preview fullscreen media searchreplace kityformula-editor', // 插件需要import进来
-  toolbar: 'formats undo redo cut kityformula-editor',
+  toolbar:
+    'formats undo redo cut kityformula-editor tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry',
   fontsize_formats: '8px 10px 12px 14pt 16px 18px 20px 22px 24px 26px 28px 30px 36px',
+  external_plugins: {
+    tiny_mce_wiris: '/mathtype-tinymce6/plugin.min.js',
+  },
 })
 
-// const latex = MathMl2LaTeX.convert(
-//   '<p><math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mo>&#8747;</mo><mn>0</mn><mn>1</mn></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>d</mo><mi>x</mi></math></p>'
-// )
-// console.log(latex)
+const latex = MathMl2LaTeX.convert(
+  '<math xmlns="http://www.w3.org/1998/Math/MathML"><mroot><mn>2</mn><mn>3</mn></mroot></math>'
+  // '<p><math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mo>&#8747;</mo><mn>0</mn><mn>1</mn></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>d</mo><mi>x</mi></math></p>'
+)
+console.log(latex)
 </script>
 
 <template>
-  <!-- <editor
+  <editor
     :id="tinymceId"
     v-model="contentValue"
     initial-value="<p>Initial editor content</p>"
     :init="initOptions"
     tinymce-script-src="/tinymce/tinymce.min.js"
-  /> -->
+  />
   <h1>{{ msg }}</h1>
 
   <div class="card">

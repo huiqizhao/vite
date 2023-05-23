@@ -1,0 +1,81 @@
+{
+  "_from": "@wiris/mathtype-tinymce6",
+  "_id": "@wiris/mathtype-tinymce6@8.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-vv+KdPKzh5gdht+SNIN+KRwZflhVwZr30wf2rhdYcc78KjPKLYYrxnRqpb8dU/7VYzT5IXf6hTjddFe0Nwq9XQ==",
+  "_location": "/@wiris/mathtype-tinymce6",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@wiris/mathtype-tinymce6",
+    "name": "@wiris/mathtype-tinymce6",
+    "escapedName": "@wiris%2fmathtype-tinymce6",
+    "scope": "@wiris",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmmirror.com/@wiris/mathtype-tinymce6/-/mathtype-tinymce6-8.1.1.tgz",
+  "_shasum": "fe564a2330e065f0901cc46b988c261c56a902d4",
+  "_spec": "@wiris/mathtype-tinymce6",
+  "_where": "D:\\learningFile\\fontend\\Vue\\vite-ts",
+  "author": {
+    "name": "WIRIS Team",
+    "url": "www.wiris.com/?utm_source=npmjs&utm_medium=referral"
+  },
+  "bugs": {
+    "email": "support@wiris.com"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@wiris/mathtype-html-integration-devkit": "1.10.1"
+  },
+  "deprecated": false,
+  "description": "MathType Web for TinyMCE6 editor",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "raw-loader": "^4.0.2",
+    "shx": "^0.3.3",
+    "style-loader": "^3.3.0",
+    "terser-webpack-plugin": "^5.3.0",
+    "url-loader": "^4.1.1"
+  },
+  "homepage": "http://www.wiris.com/?utm_source=npmjs&utm_medium=referral",
+  "keywords": [
+    "chem",
+    "chemistry",
+    "chemtype",
+    "editor",
+    "equation",
+    "latex",
+    "math",
+    "mathml",
+    "maths",
+    "mathtype",
+    "tinymce",
+    "tinymce5",
+    "wiris"
+  ],
+  "license": "MIT",
+  "main": "plugin.min.js",
+  "name": "@wiris/mathtype-tinymce6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wiris/html-integrations/tree/stable/packages/mathtype-tinymce6"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "clean": "shx rm -f plugin.min.js",
+    "prepack": "npm install && npm run build"
+  },
+  "version": "8.1.1"
+}
