@@ -12,6 +12,7 @@ import FormulaConatiner from '@/components/FormulaConatiner.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div> -->
+  123
   <HelloWorld msg="Vite + Vue" />
   <FormulaConatiner />
   <router-view></router-view>
